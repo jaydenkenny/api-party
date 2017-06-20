@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Switch, Route, NavLink} from 'react-router-dom'
 import './App.css';
+import Github from './Github'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <div className="App-heading">
+            <h3>Ain't no party like an</h3>
+            <h1>API PARTY</h1>
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ul className='link'>
+          <li>
+            <NavLink to ='/github'>Github API</NavLink>
+            </li>
+        </ul>
+        <Switch>
+          <Route path='/github' component={Github} />
+          <Route render={() => <p>To get started, click one of the links above</p>} />
+        </Switch>
       </div>
     );
   }
