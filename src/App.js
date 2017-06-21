@@ -3,7 +3,7 @@ import { Switch, Route, NavLink } from 'react-router-dom'
 import './App.css';
 
 import Github from './Github'
-import Meme from './Meme'
+import Quote from './Quote'
 
 class App extends Component {
   render() {
@@ -19,13 +19,13 @@ class App extends Component {
               <NavLink to='/github'>Github API</NavLink>
             </li>
             <li>
-              <NavLink to='/meme'>Meme API</NavLink>
+              <NavLink to='/quote'>Ron Swanson API</NavLink>
             </li>
           </ul>
         </div>
         <Switch>
           <Route path='/github' component={Github} />
-          <Route path='/meme' component={Meme} />
+          <Route path='/quote' component={Quote} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
