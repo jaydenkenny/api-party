@@ -42,7 +42,7 @@ function RonQuote(props) {
     return(
         <div>
             <img src="https://media.giphy.com/media/ozfOKtKOh9e5a/giphy.gif" alt="quote logo"/>
-            <h3>{props.quote}</h3>
+            <h3>"{props.quote}"</h3>
         </div>
     )
 }
