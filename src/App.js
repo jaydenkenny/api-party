@@ -1,30 +1,36 @@
 import React, { Component } from 'react';
-import {Switch, Route, NavLink} from 'react-router-dom'
+import { Switch, Route, NavLink } from 'react-router-dom'
 import './App.css';
+
 import Github from './Github'
+import Meme from './Meme'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <div className="App-heading">
+          <div className="App-headings">
             <h3>Ain't no party like an</h3>
-            <h1>API PARTY</h1>
+            <h1>API Party</h1>
           </div>
-        </div>
-        <ul className='link'>
-          <li>
-            <NavLink to ='/github'>Github API</NavLink>
+          <ul className="nav-links">
+            <li>
+              <NavLink to='/github'>Github API</NavLink>
             </li>
-        </ul>
+            <li>
+              <NavLink to='/meme'>Meme API</NavLink>
+            </li>
+          </ul>
+        </div>
         <Switch>
           <Route path='/github' component={Github} />
+          <Route path='/meme' component={Meme} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
     );
   }
 }
-
 export default App;
+
